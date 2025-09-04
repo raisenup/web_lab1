@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 1: Maps</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr; 
+            grid-template-rows: auto auto auto; 
+            height: 100vh; 
+        }
+
+        .item {
+            display: flex;
+            padding: 10px;
+            align-items: center;
+            font-size: 20px;
+            border: 1px solid #000;
+        }
+
+        .one   { grid-column: 1 / 4; background: #b3cde0; justify-content: space-between;}
+        .two   { grid-column: 1 / 2; grid-row: 2 / 5; background: #d9ead3; justify-content: right; }
+        .three { grid-column: 2 / 3; grid-row: 2 / 4; background: #fff; flex-direction: column;}
+        .four  { grid-column: 3 / 4; grid-row: 2 / 3; background: #d9ead3; }
+        .five  { grid-column: 3 / 4; grid-row: 3 / 4; background: #f9d5c4; }
+        .six   { grid-column: 2 / 4; grid-row: 4 / 4; background: #b3cde0; justify-content: space-between;}
+
+        .x {
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #000;
+            margin: 5px;
+        }
+
+        .y {
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #000;
+            margin: 5px;
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item one"><div class="x"><h1>My lab 1</h1></div> Lorem ipsum dolor sit amet </div>
+        <div class="item two">
+            <ul>
+                <li><a href="main.html">Main</a></li>
+                <li><a href="lists.html">Lists</a></li>
+                <li><a href="images.html">Images</a></li>
+                <li><a href="hyperlinks.html">Hyperlinks</a></li>
+                <li><a href="maps.html">Maps</a></li>
+            </ul>
+        </div>
+        <div class="item three">
+            <h2>Map Example</h2>
+            <p>Click on the Earth or the Sun</p>
+            <img src="img/planets.jpg" width="300px" alt="Planets" usemap="#planetmap">
+            <map name="planetmap">
+                <area shape="circle" coords="62,122,30" href="https://en.wikipedia.org/wiki/Earth" target="_blank" alt="Earth">
+                <area shape="circle" coords="225,73,50" href="https://en.wikipedia.org/wiki/Sun" target="_blank" alt="Sun">
+            </map>
+        </div>
+        <div class="item four">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae praesentium minus iure? Magni, dolore eaque. </div>
+        <div class="item five">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci ipsa tempore ea in mollitia voluptate labore quo id nemo corporis? Quod porro incidunt quo mollitia obcaecati autem voluptates modi soluta?</div>
+        <div class="item six"><div class="y"><h2>Scienta vinces</h2></div> Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+    </div>
+</body>
+</html>
